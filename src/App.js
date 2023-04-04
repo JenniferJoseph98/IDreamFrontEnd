@@ -23,8 +23,9 @@ function App() {
           setIsChecked(!isChecked);
           setUrl("");
           setLabel("");
+          alert("Post added");
         })
-        .catch((error) => console.log(error));
+        .catch((error) => alert("Error Occured"));
     } else {
       alert("Enter Data");
     }
@@ -124,7 +125,6 @@ function App() {
                 </button>
               </div>
               <Image
-                
                 data={searchData}
                 handleCheckboxChange={handleCheckboxChange}
               />
