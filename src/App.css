@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+}
+.addpopup{
+  position: fixed;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(232, 219, 219);
+  top: 30%;
+  border-radius: 15px;
+  left: 35%;
+  padding: 25px 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+header{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  justify-content: space-between;
+  position: relative;
+cursor: all-scroll;
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.bodycont{
+    position: relative;
+      animation-name: slide2-in;
+      animation-duration: 2s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+}
+.headerleft{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+  
+  padding: 10px;
+}
+.imagecon{
+  display: grid;
+  margin-top: 50px;
+    gap: 50px 100px;
+      grid-template-columns: auto auto auto;
+}
+.image:hover{
+  transform: rotate(-7deg);  
+}
+.image {
+      height: 400px;
+        width: 250px;
+        background-size: 260px 410px;
+        margin-left: 20px;
+        color: black;
+        margin-bottom: 20px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+  --s: 250px;
+
+  --b: 3px;
+
+  --g: 14px;
+
+  --c: gray;
+
+transition: transform .0s ease-in-out;
+  width: var(--s);
+  aspect-ratio: 1;
+  outline: calc(var(--s)/2) solid rgba(82, 78, 78, 0.6);
+  outline-offset: calc(var(--s)/-2);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.image:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+}
+
+@keyframes slide-in {
+  from {
+    left: -100%;
+    opacity: 0;
+  }
+
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide2-in {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+
+  to {
+    right: 0%;
+    opacity: 1;
+  }
+}
